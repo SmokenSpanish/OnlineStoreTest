@@ -1,0 +1,214 @@
+@import '_reset';
+
+.page {
+    background-color: rgba(255, 254, 251, 0.8);
+}
+
+.content {
+    min-width: 1440px;
+    padding: 32px;
+    color: #49485E;
+}
+
+.content__title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    .select {
+        width: 121px;
+        height: 36px;
+        position: relative;
+        padding: 11px 16px;
+        display: flex;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+    }
+
+    .select:after {
+        content: "";
+        background-image: url('../images/Rectangle\ 33.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 10%;
+        height: 80%;
+        position: absolute;
+        right: 17px;
+        top: 7px;
+    }
+
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 15px;
+        color: #B4B4B4;
+    }
+}
+
+.content__container {
+    display: flex;
+    border: 1px solid;
+}
+
+.content__title {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    width: 247px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 35px;
+    
+}
+
+.content__navigation {
+    width: 332px;
+    height: 440px;
+    background-color: #FFFEFB;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02);
+    border-radius: 4px;
+    padding: 24px;
+    // position: fixed;
+}
+
+.nav__title {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 13px;
+    letter-spacing: -0.02em;
+    margin-bottom: 4px;
+}
+
+.nav__form {
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        margin-bottom: 16px;
+    input {
+        color: #B4B4B4;
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+        width: 93.4%;
+        height: 36px;
+        border: none;
+        padding-left: 16px;
+    }
+    input:focus {
+        outline: none;
+    }
+}
+
+.nav__form_type_description {
+    height: 108px;
+
+    textarea {
+        width: 90%;
+        height: 87px;
+        border: none;
+        resize: none;
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+        color: #B4B4B4;
+        padding: 10px 16px;
+    }
+
+    textarea:focus {
+        outline: none;
+    }
+}
+
+.nav__form_type_price {
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+    }   
+}
+
+.nav__button {
+    display: block;
+    width: 100%;
+    height: 36px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 24px;
+    padding: 0;
+    color: #B4B4B4;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+}
+
+.cards {
+    display: grid;
+    width: 1028px;
+    grid-template-columns: repeat(auto-fit, minmax(332px, 1fr));
+    gap: 16px;
+    padding-left: 16px;
+}
+
+.card {
+    width: 332px;
+    height: 423px;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02);
+    border-radius: 4px;
+    .card__image {
+        background-image: url('../images/samuraj-mech-solnce-krasnyj-stal-2.jpg');
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 4px 4px 0px 0px;
+    }
+
+    .card__title {
+        width: 200px;
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 25px;
+        color: #3F3F3F;
+        margin: 16px;
+    }
+
+    .card__description {
+        width: 300px;
+        height: 80px;
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        color: #3F3F3F;
+        margin-left: 16px;
+    }
+
+    .card__price {
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 30px;
+        color: #3F3F3F;
+        margin: 32px 0 24px 16px;
+    }
+}
