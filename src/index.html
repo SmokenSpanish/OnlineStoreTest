@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body class="page">
+    <main class="content">
+        <div class="content__title-container">
+            <h1 class="content__title">Добавление товара</h1>
+            <div class="select">
+                <select class="card__select-button" disabled>
+                    <option value="По умолчанию">По умолчанию</option>
+                </select>
+            </div>
+        </div>
+        <div class="content__container">
+            <nav class="content__navigation">
+                <h2 class="nav__title">Наименование товара</h2>
+                <form action="" class="nav__form nav__form_type_name">
+                    <input type="text" placeholder="Введите наименование товара" name="name">
+                </form>
+                <h2 class="nav__title">Описание товара</h2>
+                <form action="" class="nav__form nav__form_type_description">
+                    <textarea type="text" placeholder="Введите описание товара" name="description"></textarea>
+                </form>
+                <h2 class="nav__title">Ссылка на изображение товара</h2>
+                <form action="" class="nav__form nav__form_type_url">
+                    <input type="url" placeholder="Введите ссылку" name="url">
+                </form>
+                <h2 class="nav__title">Цена товара</h2>
+                <form action="" class="nav__form nav__form_type_price">
+                    <input type="number" placeholder="Введите цену" name="price">
+                </form>
+                <button class="nav__button">Добавить товар</button>
+            </nav>
+            <section class="cards"></section>
+            <template class="template-cards">
+                <article class="card">
+                    <div class="card__image"></div>
+                    <h3 class="card__title">Наименование товара</h3>
+                    <p class="card__description">Довольно-таки интересное описание товара в несколько строк.
+                        Довольно-таки интересное описание товара в несколько строк
+                    </p>
+                    <p class="card__price">10 000</p>
+                </article>
+                <!-- <article class="card">
+                    <div class="card__image"></div>
+                    <h3 class="card__title">Наименование товара</h3>
+                    <p class="card__description">Довольно-таки интересное описание товара в несколько строк.
+                        Довольно-таки интересное описание товара в несколько строк
+                    </p>
+                    <p class="card__price">10 000</p>
+                </article>
+                <article class="card">
+                    <div class="card__image"></div>
+                    <h3 class="card__title">Наименование товара</h3>
+                    <p class="card__description">Довольно-таки интересное описание товара в несколько строк.
+                        Довольно-таки интересное описание товара в несколько строк
+                    </p>
+                    <p class="card__price">10 000</p>
+                </article>
+                <article class="card">
+                    <div class="card__image"></div>
+                    <h3 class="card__title">Наименование товара</h3>
+                    <p class="card__description">Довольно-таки интересное описание товара в несколько строк.
+                        Довольно-таки интересное описание товара в несколько строк
+                    </p>
+                    <p class="card__price">10 000</p>
+                </article>
+                <article class="card">
+                    <div class="card__image"></div>
+                    <h3 class="card__title">Наименование товара</h3>
+                    <p class="card__description">Довольно-таки интересное описание товара в несколько строк.
+                        Довольно-таки интересное описание товара в несколько строк
+                    </p>
+                    <p class="card__price">10 000</p>
+                </article>
+                <article class="card">
+                    <div class="card__image"></div>
+                    <h3 class="card__title">Наименование товара</h3>
+                    <p class="card__description">Довольно-таки интересное описание товара в несколько строк.
+                        Довольно-таки интересное описание товара в несколько строк
+                    </p>
+                    <p class="card__price">10 000</p>
+                </article>
+                <article class="card">
+                    <div class="card__image"></div>
+                    <h3 class="card__title">Наименование товара</h3>
+                    <p class="card__description">Довольно-таки интересное описание товара в несколько строк.
+                        Довольно-таки интересное описание товара в несколько строк
+                    </p>
+                    <p class="card__price">10 000</p>
+                </article> -->
+            </template>
+        </div>
+    </main>
+</body>
+
+</html>
