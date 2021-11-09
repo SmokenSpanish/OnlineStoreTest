@@ -20,82 +20,44 @@
         </div>
         <div class="content__container">
             <nav class="content__navigation">
-                <h2 class="nav__title">Наименование товара</h2>
-                <form action="" class="nav__form nav__form_type_name">
-                    <input type="text" placeholder="Введите наименование товара" name="name">
+
+                <form action="" class="nav__form">
+                    <h2 class="nav__title">Наименование товара</h2>
+                    <label class="form__label" for="name-input">
+                        <input type="text" placeholder="Введите наименование товара" id="name-input" name="name"
+                            minlength="2" maxlength="22" required>
+                        <span class="form__input-error name-input-error"></span>
+                    </label>
+                    <h2 class="nav__title">Описание товара</h2>
+                    <textarea type="text" placeholder="Введите описание товара" name="description" minlength="5"
+                        required></textarea>
+
+                    <h2 class="nav__title">Ссылка на изображение товара</h2>
+                    <label class="form__label" for="url-input">
+                        <input type="url" placeholder="Введите ссылку" id="url-input" name="url" required>
+                        <span class="form__input-error url-input-error"></span>
+                    </label>
+                    <h2 class="nav__title">Цена товара</h2>
+                    <label class="form__label" for="url-input">
+                        <input type="number" placeholder="Введите цену" id="price-input" name="price" required>
+                        <span class="form__input-error price-input-error"></span>
+                    </label>
+                    <button class="nav__button" type="submit">Добавить товар</button>
                 </form>
-                <h2 class="nav__title">Описание товара</h2>
-                <form action="" class="nav__form nav__form_type_description">
-                    <textarea type="text" placeholder="Введите описание товара" name="description"></textarea>
-                </form>
-                <h2 class="nav__title">Ссылка на изображение товара</h2>
-                <form action="" class="nav__form nav__form_type_url">
-                    <input type="url" placeholder="Введите ссылку" name="url">
-                </form>
-                <h2 class="nav__title">Цена товара</h2>
-                <form action="" class="nav__form nav__form_type_price">
-                    <input type="number" placeholder="Введите цену" name="price">
-                </form>
-                <button class="nav__button">Добавить товар</button>
+
             </nav>
             <section class="cards"></section>
             <template class="template-cards">
                 <article class="card">
-                    <div class="card__image"></div>
+                    <div class="card__image-wrap">
+                        <img class="card__image">
+                    </div>
                     <h3 class="card__title">Наименование товара</h3>
                     <p class="card__description">Довольно-таки интересное описание товара в несколько строк.
                         Довольно-таки интересное описание товара в несколько строк
                     </p>
                     <p class="card__price">10 000</p>
                 </article>
-                <!-- <article class="card">
-                    <div class="card__image"></div>
-                    <h3 class="card__title">Наименование товара</h3>
-                    <p class="card__description">Довольно-таки интересное описание товара в несколько строк.
-                        Довольно-таки интересное описание товара в несколько строк
-                    </p>
-                    <p class="card__price">10 000</p>
-                </article>
-                <article class="card">
-                    <div class="card__image"></div>
-                    <h3 class="card__title">Наименование товара</h3>
-                    <p class="card__description">Довольно-таки интересное описание товара в несколько строк.
-                        Довольно-таки интересное описание товара в несколько строк
-                    </p>
-                    <p class="card__price">10 000</p>
-                </article>
-                <article class="card">
-                    <div class="card__image"></div>
-                    <h3 class="card__title">Наименование товара</h3>
-                    <p class="card__description">Довольно-таки интересное описание товара в несколько строк.
-                        Довольно-таки интересное описание товара в несколько строк
-                    </p>
-                    <p class="card__price">10 000</p>
-                </article>
-                <article class="card">
-                    <div class="card__image"></div>
-                    <h3 class="card__title">Наименование товара</h3>
-                    <p class="card__description">Довольно-таки интересное описание товара в несколько строк.
-                        Довольно-таки интересное описание товара в несколько строк
-                    </p>
-                    <p class="card__price">10 000</p>
-                </article>
-                <article class="card">
-                    <div class="card__image"></div>
-                    <h3 class="card__title">Наименование товара</h3>
-                    <p class="card__description">Довольно-таки интересное описание товара в несколько строк.
-                        Довольно-таки интересное описание товара в несколько строк
-                    </p>
-                    <p class="card__price">10 000</p>
-                </article>
-                <article class="card">
-                    <div class="card__image"></div>
-                    <h3 class="card__title">Наименование товара</h3>
-                    <p class="card__description">Довольно-таки интересное описание товара в несколько строк.
-                        Довольно-таки интересное описание товара в несколько строк
-                    </p>
-                    <p class="card__price">10 000</p>
-                </article> -->
             </template>
         </div>
     </main>
