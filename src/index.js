@@ -28,7 +28,7 @@ const initialCards = [
     {
         name: 'Мороженое',
         link: 'https://images.unsplash.com/photo-1635749712095-45327be32d38?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80',
-        description: 'ВкусноеВкусноеВкусноеВкусноеВкусноеВкусноеВкусноеВкусноеВкусноеВкусноеВкусноеВкусноеВкусноеВкусноеВкусноеВкусное',
+        description: 'раз раз раз раз раз раз раз раз раз раз раз раз раз раз раз раз раз раз раз раз раз раз раз раз раз раз раз раз раз раз раз раз',
         price: '50 руб.'
     },
     {
@@ -46,9 +46,9 @@ const navCardNameInput = navForm.querySelector('input[name="name"]');
 const navCardDescriptionInput = navForm.querySelector('textarea[name="description"]');
 const navCardUrlInput = navForm.querySelector('input[name="url"]');
 const navCardPriceInput = navForm.querySelector('input[name="price"]');
-const navButton = navForm.querySelector('.nav__button');
+const inputArr = navForm.querySelectorAll('input');
 
-function renderElement() {
+const renderElement = () => {
     const listItems = initialCards.map(generateCard);
     cardsContainer.append(...listItems);
 }
@@ -61,23 +61,85 @@ function generateCard(item) {
     const cardDescription = newItem.querySelector('.card__description');
     const cardPrice = newItem.querySelector('.card__price');
     cardName.textContent = item.name;
-    cardImage.style.backgroundImage = `url('${item.link}')`;
+    cardImage.src = item.link;
     cardDescription.textContent = item.description;
     cardPrice.textContent = item.price;
     return newItem;
 }
 
-function addNewCard(evt) {
+const addNewCard = (evt) => {
     evt.preventDefault();
     const inputName = navCardNameInput.value;
     const inputImage = navCardUrlInput.value;
     const inputDescription = navCardDescriptionInput.value;
     const inputPrice = `${navCardPriceInput.value} руб.`;
-    const newItem = generateCard({ name: inputName, link: inputImage,
-         description: inputDescription, price: inputPrice });
+    const newItem = generateCard({
+        name: inputName, link: inputImage,
+        description: inputDescription, price: inputPrice
+    });
     cardsContainer.prepend(newItem);
+    navForm.reset();
 }
+
 
 navForm.addEventListener('submit', addNewCard);
 
 
+const showError = (form, formElement, errorMessage) => {
+    const errorElement = form.querySelector(`.${formElement.id}-error`);
+    formElement.classList.add('form__input_type_error');
+    errorElement.classList.add('form__input-error_active');
+    errorElement.textContent = errorMessage;
+}
+const hideError = (form, formElement) => {
+    const errorElement = form.querySelector(`.${formElement.id}-error`);
+    formElement.classList.remove('form__input_type_error');
+    errorElement.classList.remove('form__input-error_active');
+    errorElement.textContent = '';
+}
+
+const checkInputValidity = (formElement, inputElement) => {
+    if (!inputElement.validity.valid) {
+        showError(formElement, inputElement, inputElement.validationMessage)
+    } else {
+        hideError(formElement, inputElement)
+    }
+}
+
+const hasInvalidInput = (inputList) => {
+    return inputList.some((inputElement) => {
+        return !inputElement.validity.valid
+    })
+    }
+    
+    const toggleButtonState = (inputList, buttonElement) => {
+        if (hasInvalidInput(inputList)) {
+            buttonElement.classList.add('nav__button_inactive')
+        } else {
+            buttonElement.classList.remove('nav__button_inactive');
+        }
+    }
+    
+
+const setEventListeners = (formElement) => {
+ const inputList = Array.from(formElement.querySelectorAll('input'));
+ const navButton = formElement.querySelector('.nav__button');
+ toggleButtonState(inputList, navButton);
+ inputList.forEach((inputElement) => {
+    inputElement.addEventListener('input', () => {
+        checkInputValidity(formElement, inputElement);
+        toggleButtonState(inputList, navButton);
+    })
+ })
+}
+
+const enableValidation = () => {
+    const formList = Array.from(document.querySelectorAll('.nav__form'));
+    formList.forEach((formElement) => {
+        formElement.addEventListener('submit', (evt) => {
+            evt.preventDefault();
+        })
+        setEventListeners(formElement);
+    })
+}
+enableValidation()
