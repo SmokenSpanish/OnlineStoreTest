@@ -1,4 +1,4 @@
-@import './vendor/reset';
+@import '../vendor/reset';
 
 .page {
     font-family: Source Sans Pro, sans-serif;
@@ -32,7 +32,7 @@
 
     .select:after {
         content: "";
-        background-image: url('../images/Rectangle\ 33.svg');
+        background-image: url('../../images/Rectangle\ 33.svg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
