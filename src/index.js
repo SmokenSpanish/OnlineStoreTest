@@ -2,7 +2,7 @@ import './main.scss';
 
 const initialCards = [
     {
-        name: 'Бублики',
+        name: 'Пончики',
         link: 'https://images.unsplash.com/photo-1636178942520-3d3da95e3922?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=465&q=80',
         description: 'Очень вкусные, выского качества тесто',
         price: '50 руб.'
@@ -22,7 +22,7 @@ const initialCards = [
     {
         name: 'Вода',
         link: 'https://images.unsplash.com/photo-1635980608878-64bb315f68b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=382&q=80',
-        description: 'Полезная,',
+        description: 'Полезная',
         price: '50 руб.'
     },
     {
