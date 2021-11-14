@@ -81,6 +81,7 @@
     border-radius: 4px;
     position: sticky;
     top: 24px;
+
     box-sizing: border-box;
 
     .nav__form {
@@ -92,7 +93,7 @@
             letter-spacing: -0.02em;
             margin-bottom: 4px;
         }
-
+      
         .nav__form_type_required {
             position: absolute;
             top: 0;
@@ -104,6 +105,7 @@
             background-position: center;
             background-size: contain;
         }
+
 
         input {
             background-color: #FFFEFB;
@@ -240,7 +242,7 @@
     border-radius: 4px;
     transition: box-shadow .2s linear;
     cursor: pointer;
-
+  
     .card__image-wrap {
         overflow: hidden;
         height: 200px;
